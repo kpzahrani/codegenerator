@@ -1,0 +1,17 @@
+@using System.Collections.Generic
+@model codegenerator_razor.YourModel
+
+using System;
+
+namespace @Model.NamespaceName
+{
+    public class @Model.ClassName
+    {
+@foreach (var property in Model.Properties)
+{
+    <text>
+        public @property.Type @property.Name { get; set; }
+    </text>
+}
+}
+}
